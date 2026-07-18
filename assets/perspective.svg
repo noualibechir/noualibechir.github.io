@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120">
+<g fill="#2B2622">
+<path d="M40 70c14 0 22-14 42-14 26 0 34 18 62 18 12 0 20 4 20 12 0 6-5 8-14 8H50c-10 0-18-4-18-14 0-6 3-8 8-8z"/>
+<path d="M40 70c0-6 4-12 4-12" stroke="#2B2622" stroke-width="4" fill="none" stroke-linecap="round"/>
+</g>
+<text x="120" y="106" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#2B2622" text-anchor="middle" letter-spacing="1">PERSPECTIVE</text>
+</svg>
