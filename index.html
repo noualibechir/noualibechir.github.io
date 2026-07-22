@@ -30,6 +30,7 @@ a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .glow{position:fixed;width:460px;height:460px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(224,180,80,.09),transparent 62%);transform:translate(-50%,-50%);left:-999px;top:-999px;mix-blend-mode:screen}
 @media(hover:none){.glow{display:none}}
+@media(max-width:880px){.glow{display:none}}
 .atmos{position:fixed;inset:0;pointer-events:none;z-index:2;background:radial-gradient(130% 90% at 50% -5%,transparent 52%,rgba(0,0,0,.6) 100%)}
 .prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-2));z-index:60;width:0;transition:width .1s linear}
 
@@ -204,16 +205,49 @@ section{position:relative;z-index:3;padding:120px 0}
 footer{position:relative;z-index:3;padding:42px 0;border-top:1px solid var(--line-2);text-align:center;font-family:var(--mono);font-size:.74rem;color:var(--muted);letter-spacing:.05em}
 
 @media(max-width:880px){
+  .wrap{padding:0 22px}
   .nlinks{display:none;position:fixed;top:64px;left:0;right:0;flex-direction:column;gap:0;background:rgba(8,9,13,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line-2)}
   .nlinks.open{display:flex}.nlinks a{padding:18px 34px;border-top:1px solid var(--line-2);font-size:.85rem}
   .burger{display:block}
-  .hero{grid-template-columns:1fr;gap:48px}.portrait{max-width:340px}
-  .about,.pgrid,.vgrid,.bgrid,.pcard.feat,.edu-wrap{grid-template-columns:1fr}.pcard.feat{gap:24px}
-  .media-split{grid-template-columns:1fr;gap:16px}.media-split .media-el,.media-split .media{max-width:260px;margin:0 auto}
-  .chess-photos{grid-template-columns:1fr 1fr 1fr}
-  .photo-col{grid-template-rows:auto;grid-template-columns:1fr 1fr 1fr}
-  .video-row{grid-template-columns:1fr 1fr;gap:12px}.video-row .media-el,.video-row .media{max-width:100%}
-  section{padding:84px 0}
+  header{min-height:auto;padding:110px 0 60px}
+  .hero{grid-template-columns:1fr;gap:36px}
+  .portrait{max-width:260px;margin:0 auto;order:-1}
+  .hero h1{font-size:clamp(2.6rem,12vw,3.6rem)}
+  .lede{max-width:100%}
+  .hero-cta{gap:12px}.btn{padding:13px 22px;font-size:.9rem}
+  .scrollcue{display:none}
+  .about,.pgrid,.vgrid,.bgrid,.edu-wrap{grid-template-columns:1fr;gap:28px}
+  .pcard,.vcard,.bcard{padding:26px}
+  .stats{border-left:none;border-top:1px solid var(--line);padding-top:8px}
+  .shead{margin-bottom:34px;gap:14px}
+  /* chess: video on top, then photos 2-up */
+  .chess-top{grid-template-columns:1fr;grid-template-rows:auto auto;gap:14px}
+  .chess-video,.chess-video.ph{height:320px}
+  .chess-top-img{height:220px}
+  .chess-photos,.chess-photos.two{grid-template-columns:1fr 1fr;gap:14px}
+  .chess-photos .thumb-img{height:150px}
+  /* piano: two videos stacked full width */
+  .video-row{grid-template-columns:1fr;gap:14px}
+  .video-row .media-el,.video-row .media{width:100%;height:400px}
+  .media-el{height:320px}
+  section{padding:72px 0}
+  .contact{padding:90px 0}
+  .clinks{gap:12px}.clink{font-size:.8rem;padding:12px 18px}
+}
+@media(max-width:520px){
+  .wrap{padding:0 18px}
+  .hero h1{font-size:clamp(2.2rem,13vw,2.9rem)}
+  .lede{font-size:1rem}
+  .pcard,.vcard,.bcard{padding:22px}
+  .pcard h3,.vcard h3{font-size:1.3rem;padding-right:34px}
+  .chess-photos,.chess-photos.two{grid-template-columns:1fr}
+  .chess-photos .thumb-img{height:200px}
+  .chess-video,.chess-video.ph{height:300px}
+  .chess-top-img{height:200px}
+  .video-row .media-el,.video-row .media{height:360px}
+  .stat .n{font-size:2.2rem}
+  section{padding:60px 0}
+  .hero-social a{width:38px;height:38px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.load>*,.portrait.load-p{opacity:1;animation:none}}
 </style>
